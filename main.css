@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: url("images/bg.jpg") no-repeat;
+    background-size: cover;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+h1 {
+    color: rgb(217, 220, 227);
+    text-shadow: -2px 2px 2px rgb(64, 66, 77);
+    font-family: 'Bitter', serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: rgb(33, 64, 135);
+    text-shadow: -1px 1px 1px rgb(64, 66, 77);
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+body {
+    width: 90%;
+    background-color: rgba(133, 149, 161, 0.85);
+    padding: 30px 15px;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.search {
+    display: inline-block;
+    height: 60px;
+    width: 60%;
+    line-height: 2em;
+    padding: 5px;
+    font-size: 2em;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(64, 66, 77);
+}
+
+.search_section img {
+    display: inline-block;
+    height: 63px;
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.results_section {
+    margin: 30px auto 0px auto;
+    font-size: 0;
+}
+
+.result {
+    font-size: 16px;
+    background-color: rgba(33, 64, 135, .85);
+    color: rgb(217, 220, 227);
+    display: inline-block;
+    height: 300px;
+    border-radius: 10px;
+    width: 32.1%;
+    padding: 10px 5px 20px 5px;
+    box-shadow: 3px 3px 3px rgb(64, 66, 77);
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.result:last-child(3) {
+    margin-left: -5px;
+}
+
+.result p {
+    font-size: 1.2em;
+    margin-top: 15px;
+    line-height: 1.2em;
+    height: 3.6em;
+    overflow: hidden;
+}
+
+.result img {
+    width: 100%;
+    max-height: 160px;
+    margin-top: 25px;
+    padding: 0 10px;
+}
+
+@media only screen and (max-width:965px){
+    .result{
+        width:31%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .result {
+        width: 48%;
+    }
+    .result:nth-child(even) {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .result {
+        width: 100%
+    }
+}
