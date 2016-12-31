@@ -23,6 +23,7 @@ function getDataFromApi(searchTerm, callback) {
   console.log($.ajax(settings));
 }
 
+// Render HTML
 function displayYouTubeSearchData(data) {
   var renderedHTML = '';
   if (data.items) {
@@ -44,12 +45,20 @@ function displayYouTubeSearchData(data) {
 
 
 // Application functionality *
+
 $(document).ready(function(){
 // on user ".search_button" click or "enter" keypress store ".search" input value
+$(".search_section img").click(function(event){
+  user_search_string = $(".search").val();
+  getDataFromApi(user_search_string, displayYouTubeSearchData);
+  $(".divider").removeClass("hidden");
+  $(".results_section").removeClass("hidden");
+});
+
 $(".search").keypress(function(event){
   if(event.keyCode == 13){
     user_search_string = $(".search").val();
-    console.log("user_search_string: " + user_search_string);
+    //console.log("user_search_string: " + user_search_string);
     getDataFromApi(user_search_string, displayYouTubeSearchData);
     $(".divider").removeClass("hidden");
     $(".results_section").removeClass("hidden");
