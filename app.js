@@ -1,5 +1,8 @@
 // Application state *
 
+// API test url
+// https://www.googleapis.com/youtube/v3/search/?part=snippet&key=AIzaSyAj1RKJlNaMlg3rfFolFXPzl7bC9d4ehhE&maxResults=18&q=cats&r=json
+
 // Global variables
 var user_search_string = "";
 var YOUTUBE_BASE_URL = 'https://www.googleapis.com/youtube/v3/search';
@@ -48,6 +51,7 @@ function displayYouTubeSearchData(data) {
 
 $(document).ready(function(){
 // on user ".search_button" click or "enter" keypress store ".search" input value
+
 $(".search_section img").click(function(event){
   user_search_string = $(".search").val();
   getDataFromApi(user_search_string, displayYouTubeSearchData);
